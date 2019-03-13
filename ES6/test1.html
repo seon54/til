@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">    
+    <title>JS</title>
+</head>
+<body>
+    <ul>
+        <li id="first">apple</li>
+        <li>orange</li>
+        <li>banana</li>
+        <li>strawberry</li>
+    </ul>
+
+    <script>
+        const liTags = document.querySelectorAll('li');
+        const liArr = Array.from(liTags);
+       
+
+        function print() {
+
+            // liArr.filter((li) => {
+
+            //     if (li.innerText.includes('')) return arr.push(li.innerText);
+            // })
+
+            const arr = liArr.filter((li) => {
+                return li.innerText.includes('e');
+            })
+            console.log(arr);
+            
+        }
+
+        print()
+        
+        // destructuring 
+        const firstLi = document.querySelector("#first");
+        firstLi.addEventListener('click', ({target}) => console.log(target.tagName));
+
+    </script>
+</body>
+</html>
